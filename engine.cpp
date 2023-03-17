@@ -16,19 +16,25 @@
 
 namespace engine {
     
-    unsigned int start() {
+    unsigned int start(string args[]) {
         
         
         
     };
     
-    unsigned int pause() {
+    unsigned int pause(string args[]) {
         
         
         
     };
     
-    unsigned int stop() {
+    unsigned int unpause(string args[]) {
+        
+        
+        
+    };
+    
+    unsigned int stop(string args[]) {
         
         
         
