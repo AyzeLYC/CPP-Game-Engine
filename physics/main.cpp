@@ -10,7 +10,7 @@ namespace physics {
                result;
         
         absoluteTemperature = 273.15 + temperature;
-        result = sqrt(specificHeatsRatio * gasConstant * (absoluteTemperature));
+        result = sqrt(specificHeatsRatio * gasConstant * absoluteTemperature);
         return result;
         
     };
