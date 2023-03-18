@@ -2,7 +2,8 @@
 
 namespace physics {
     
-    unsigned long long lightSpeed = 299792458;
+    unsigned long long earthGravity = 0,
+                       lightSpeed = 299792458;
     
     unsigned int calculateSoundSpeed(unsigned int specificHeatsRatio, unsigned int gasConstant, float temperature) {
         
