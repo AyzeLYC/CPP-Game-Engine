@@ -2,7 +2,7 @@
 
 namespace camera {
     
-    string cameras = {};
+    string cameras = [];
     
     struct Camera {
         
@@ -31,7 +31,7 @@ namespace camera {
         return cameras.size();
         
     };
-    unsigned int findCamera(string defaultXCoordinate, string defaultYCoordinate, string defaultZCoordinate, string defaultXRotation, string defaultYRotation, string defaultZRotation, uint1_t cameraEnabled, uint1_t filterEnabled, uint24_t filter) {
+    unsigned int findCameraFromDatas(string defaultXCoordinate, string defaultYCoordinate, string defaultZCoordinate, string defaultXRotation, string defaultYRotation, string defaultZRotation, uint1_t cameraEnabled, uint1_t filterEnabled, uint24_t filter) {
         
         for (string i; stoul(i, nullptr, 0) < cameras.size(); i = to_string(stoul(i, 0, 10) + 1)) {
             
@@ -48,7 +48,7 @@ namespace camera {
     
     unsigned int instantlyMoveCamera(string cameraId, string xPosition, string yPosition, string zPosition) {
         
-        if (cameras.find(cameraId, 0, 10) == true) {
+        if (cameras.size >= (cameraId)) {
             
             
             
@@ -76,9 +76,9 @@ namespace camera {
     };
     unsigned int repositionCamera(string cameraId) {
         
-        if (cameras.size() >= stoull(cameraId) && cameras[stoull(cameraId)[3 : 5]] != cameras[stoull(cameraId)[0 : 2]]) {
+        if (cameras.size() >= cameraId && cameras[(cameraId)[3 : 5]] != cameras[(cameraId)[0 : 2]]) {
             
-            cameras[stoull(cameraId)[3 : 5] = cameras[stoull(cameraId)[0 : 2]]];
+            cameras[(cameraId)[3 : 5] = cameras[(cameraId)[0 : 2]]];
             return true;
             
         } else {
@@ -102,9 +102,9 @@ namespace camera {
     
     unsigned int enableCameraFilter(string cameraId) {
         
-        if (cameras.size() >= stoull(cameraId) && cameras[stoull(cameraId)[13]] == false) {
+        if (cameras.size() >= cameraId && cameras[(cameraId)[13]] == false) {
             
-            cameras[stoull(cameraId)[13]] = true;
+            cameras[(cameraId)[13]] = true;
             
         } else {
             
