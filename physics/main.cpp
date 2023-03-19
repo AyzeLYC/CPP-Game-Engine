@@ -16,4 +16,10 @@ namespace physics {
         
     };
     
+    unsigned int collision(unsigned int xSpeed, unsigned int ySpeed, unsigned int zSpeed, unsigned int firstObjectMass, unsigned int secondObjectMass) {
+        
+        
+        
+    };
+    
 }
