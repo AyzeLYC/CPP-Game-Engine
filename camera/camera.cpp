@@ -26,7 +26,8 @@ namespace camera {
     
     unsigned int createCamera(string defaultXCoordinate, string defaultYCoordinate, string defaultZCoordinate, string defaultXRotation, string defaultYRotation, string defaultZRotation, bool cameraEnabled, bool filterEnabled, string filter) {
         
-        cameras.append(Cameras(defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, cameraEnabled, filterEnabled, filter));
+        Camera CAMERA = Camera(defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, cameraEnabled, filterEnabled, filter));
+        cameras.append(CAMERA);
         return cameras.size();
         
     };
