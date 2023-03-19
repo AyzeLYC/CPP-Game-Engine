@@ -46,11 +46,12 @@ namespace camera {
     };
     
     
-    unsigned int instantlyMoveCamera(string cameraId, string xPosition, string yPosition, string zPosition) {
+    unsigned int instantlyMoveCamera(string cameraId, string xCoordinate, string yCoordinate, string zCoordinate) {
         
         if (cameras.size >= (cameraId)) {
             
-            
+            cameras[(cameraId)[6 : 8]] = [xCoordinate, yCoordinate, zCoordinate];
+            return true;
             
         } else {
             
