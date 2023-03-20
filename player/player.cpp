@@ -37,22 +37,8 @@ namespace player {
                leftFootZRotation = 0,
                rightFootXRotation = 0,
                rightFootYRotation = 0,
-               rightFootZRotation = 0;
-        struct weapon {
-            
-            string name = "NONE",
-                   type = "NONE",
-                   threeDObject = [];
-            unsigned short int damages = {
-                
-                "head": 0,
-                "torso": "0",
-                "arm": 0,
-                "hand": 0,
-                "leg": 0,
-                "foot": 0
-                
-            }
+               rightFootZRotation = 0,
+               playerAdditionalDatas = {};
             
         }
         
