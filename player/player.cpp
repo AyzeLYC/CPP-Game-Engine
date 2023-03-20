@@ -4,53 +4,30 @@ namespace player {
     
     struct Player {
         
-        string nickname,
-               xCoordinate = 0,
+        string xCoordinate = 0,
                yCoordinate = 0,
                zCoordinate = 0,
-               headXRotation = 0,
-               headYRotation = 0,
-               headZRotation = 90,
-               leftArmXRotation = 90,
-               leftArmYRotation = 0,
-               leftArmZRotation = 0,
-               rightArmXRotation = 270,
-               rightArmYRotation = 0,
-               rightArmZRotation = 0,
-               leftHandXRotation = 90,
-               leftHandYRotation = 0,
-               leftHandZRotation = 0,
-               rightHandXRotation = 270,
-               rightHandYRotation = 0,
-               rightHandZRotation = 0,
-               torsoXRotation = 0,
-               torsoYRotation = 0,
-               torsoZRotation = 90,
-               leftLegXRotation = 0,
-               leftLegYRotation = 0,
-               leftLegZRotation = 0,
-               rightLegXRotation = 0,
-               rightLegYRotation = 0,
-               rightLegZRotation = 0,
-               leftFootXRotation = 0,
-               leftFootYRotation = 0,
-               leftFootZRotation = 0,
-               rightFootXRotation = 0,
-               rightFootYRotation = 0,
-               rightFootZRotation = 0,
+               xRotation = 0,
+               yRotation = 0,
+               zRotation = 0,
+               threeDModel = "",
                playerAdditionalDatas = {};
             
         }
         
     }
     
-    unsigned int createPlayer() {
+    string players = {};
+    
+    unsigned int createPlayer(string nickname, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModel, string aditionalDatas{}) {
         
-        
+        string PLAYER = new Player(xCoordinate, yCoordinate, zCoordinate, xRotation, yRotation, zRotation, threeDModel, additionalDatas);
+        players.append("'" +nickname +"': '" + PLAYER + "'");
+        return 1;
         
     };
     
-    unsigned int movePlayer(uint1_t running, string xPosition, string yPosition, string zPosition) {
+    unsigned int movePlayer(uint1_t running, string nickname, string xPosition, string yPosition, string zPosition) {
         
         
         
