@@ -58,4 +58,27 @@ namespace player {
         
     }
     
+    unsigned int createPlayer() {
+        
+        
+        
+    };
+    
+    unsigned int movePlayer(uint1_t running, string xPosition, string yPosition, string zPosition) {
+        
+        
+        
+    };
+    unsigned int rotatePlayer(string xRotation, string yRotation, string zRotation) {
+        
+        
+        
+    };
+    
+    unsigned int deletePlayer() {
+        
+        
+        
+    };
+    
 }
