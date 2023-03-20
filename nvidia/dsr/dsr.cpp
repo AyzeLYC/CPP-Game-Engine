@@ -1,4 +1,4 @@
-namespace dsr {
+namespace dsr { // Dynamic Super Resolution
     
     
     
