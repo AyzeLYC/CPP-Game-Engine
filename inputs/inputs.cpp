@@ -1,7 +1,59 @@
+#include <windows.h>
+
 namespace inputs {
     
     unsigned char key;
     
+    if (key == "0") {
+        
+        
+        
+    };
+    if (key == "1") {
+        
+        
+        
+    };
+    if (key == "2") {
+        
+        
+        
+    };
+    if (key == "3") {
+        
+        
+        
+    };
+    if (key == "4") {
+        
+        
+        
+    };
+    if (key == "5") {
+        
+        
+        
+    };
+    if (key == "6") {
+        
+        
+        
+    };
+    if (key == "7") {
+        
+        
+        
+    };
+    if (key == "8") {
+        
+        
+        
+    };
+    if (key == "9") {
+        
+        
+        
+    };
     if (key == "a") {
         
         
