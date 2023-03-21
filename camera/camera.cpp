@@ -48,9 +48,9 @@ namespace camera {
     
     unsigned int instantlyMoveCamera(string cameraId, string xCoordinate, string yCoordinate, string zCoordinate) {
         
-        if (cameras.size >= (cameraId)) {
+        if (cameras.size >= stoull(cameraId)) {
             
-            cameras[(cameraId)[6 : 8]] = [xCoordinate, yCoordinate, zCoordinate];
+            cameras[(stoull(cameraId))[6 : 8]] = [xCoordinate, yCoordinate, zCoordinate];
             return true;
             
         } else {
@@ -92,37 +92,57 @@ namespace camera {
     
     unsigned int enableCamera(string cameraId) {
         
-        
+        if (cameras.size() >= stoull(cameraId) && cameras[(stoull(cameraId))[12]] == false) {
+            
+            cameras[(stoull(cameraId))[12]] = true;
+            return true;
+            
+        } else {
+            
+            return false;
+            
+        };
         
     };
     unsigned int disableCamera(string cameraId) {
         
-        
+        if (cameras.size() >= stoull(cameraId) && cameras[(stoull(cameraId))[12]] == true) {
+            
+            cameras[(stoull(cameraId))[12]] = false;
+            return true;
+            
+        } else {
+            
+            return false;
+            
+        };
         
     };
     
     unsigned int enableCameraFilter(string cameraId) {
         
-        if (cameras.size() >= cameraId && cameras[(cameraId)[13]] == false) {
+        if (cameras.size() >= stoull(cameraId) && cameras[(stoull(cameraId))[13]] == false) {
             
             cameras[(cameraId)[13]] = true;
+            return true;
             
         } else {
             
-            
+            return false;
             
         };
         
     };
     unsigned int modifyCameraFilter(string cameraId, uint24_t newFilter) {
         
-        if (cameras.size() >= stoull(cameraId) && cameras[stoull(cameraId)[14]]) {
+        if (cameras.size() >= stoull(cameraId) && cameras[stoull(cameraId)[14]] != newFilter) {
             
-            cameras[stoull()]
+            cameras[(stoull(cameraId))[14]] = newFilter;
+            return true;
             
         } else {
             
-            
+            return false;
             
         };
         
@@ -131,12 +151,12 @@ namespace camera {
         
         if (cameras.size() >= stoul(cameraId) && cameras[stoul(cameraId)[13]] == true) {
             
-            cameras[stoull(cameraId)[12]] = false;
+            cameras[(stoull(cameraId))[13]] = false;
             return true;
             
         } else {
             
-            return "Error while trying to disable the filter of the camera".append(stoull(cameraId))
+            return "Error while trying to disable the filter of the camera" + stoull(cameraId);
             
         };
         
