@@ -33,13 +33,13 @@ namespace camera {
     };
     unsigned int findCameraFromDatas(string defaultXCoordinate, string defaultYCoordinate, string defaultZCoordinate, string defaultXRotation, string defaultYRotation, string defaultZRotation, uint1_t cameraEnabled, uint1_t filterEnabled, uint24_t filter) {
         
-        for (string i; stoul(i, nullptr, 0) < cameras.size(); i = to_string(stoul(i, 0, 10) + 1)) {
+        if (cameras.include([defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, cameraEnabled, filterEnabled, filter]) == true) {
             
-            if (cameras[i] = [defaultXCoordinate, defaultYCoordinate, defaultZCoordinate, defaultXRotation, defaultYRotation, defaultZRotation, cameraEnabled, filterEnabled, filter]) {
-                
-                return true;
-                
-            };
+            return true;
+            
+        } else {
+            
+            return false;
             
         };
         
