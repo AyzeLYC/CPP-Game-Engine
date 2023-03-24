@@ -1,10 +1,10 @@
 namespace threedimension {
     
-    unsigned int cubeAreaEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize) {
+    unsigned int cubeAreaEquation(unsigned int size) {
         
         unsigned long long result;
         
-        result = xSize * ySize * zSize;
+        result = size * size * size;
         return result;
         
     };
