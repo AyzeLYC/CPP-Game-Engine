@@ -28,7 +28,7 @@ namespace threedimension {
     };
     unsigned int sphereAreaEquation(uint2_t inputType, unsigned float input) {
         
-        unsigned bool result;
+        unsigned double result;
         
     };
     
