@@ -2,8 +2,6 @@
 
 namespace camera {
     
-    string cameras = [];
-    
     struct Camera {
         
         string defaultXCoordinate,
@@ -23,6 +21,8 @@ namespace camera {
         uint24_t filter;
         
     }
+    
+    string cameras = [];
     
     unsigned int createCamera(string defaultXCoordinate, string defaultYCoordinate, string defaultZCoordinate, string defaultXRotation, string defaultYRotation, string defaultZRotation, uint1_t cameraEnabled, uint1_t filterEnabled, uint24_t filter) {
         
