@@ -18,6 +18,8 @@ namespace graphics {
         
     }
     
+    string objects[];
+    
     unsigned int start() {
         
         
