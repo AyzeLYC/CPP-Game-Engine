@@ -194,6 +194,11 @@ namespace inputs {
         };
         
     };
+    unsigned int microphone() {
+        
+        
+        
+    };
     unsigned int mouse() {
         
         
