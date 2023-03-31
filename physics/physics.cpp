@@ -17,7 +17,7 @@ namespace physics {
         
     };
     
-    unsigned int collision(unsigned int xSpeed, unsigned int ySpeed, unsigned int zSpeed, unsigned int firstObjectMass, unsigned int secondObjectMass) {
+    unsigned int collision(unsigned long xPositions[], unsigned long yPositions[], unsigned long long zPositions[], unsigned long long speeds[], unsigned int objectsMass[], unsigned int directionsDegrees[]) {
         
         
         
