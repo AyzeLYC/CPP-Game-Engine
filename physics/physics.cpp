@@ -29,7 +29,14 @@ namespace physics {
             
         };
         
-        thread collisionCalculation();
+    };
+    
+    unsigned int calculate(unsigned int datas) {
+        
+        string result;
+        
+        thread calculator(datas);
+        calculator.join();
         
     };
     
