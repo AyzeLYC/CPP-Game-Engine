@@ -6,7 +6,7 @@ namespace physics {
     unsigned long long earthGravity = 0,
                        lightSpeed = 299792458;
     
-    unsigned int calculateSoundSpeed(unsigned int specificHeatsRatio, unsigned int gasConstant, float temperature) {
+    unsigned int calculateSoundSpeed(unsigned int specificHeatsRatio, unsigned int gasConstant, double temperature) {
         
         double absoluteTemperature,
                result;
@@ -17,26 +17,13 @@ namespace physics {
         
     };
     
-    unsigned int collision(unsigned int fps, unsigned long xPositions[], unsigned long yPositions[], unsigned long long zPositions[], unsigned long long speeds[], unsigned int objectsMass[], unsigned int directionsDegrees[]) {
+    unsigned int collision(unsigned int fps, unsigned long long xPositions[], unsigned long long yPositions[], unsigned long long zPositions[], unsigned long long speeds[], unsigned int objectsMass[], unsigned int directionsDegrees[]) {
         
-        unsigned int calculateCollision() {
+        for () {
             
-            for () {
-                
-                sleep(1000 / fps);
-                
-            };
+            sleep(1000 / fps);
             
         };
-        
-    };
-    
-    unsigned int calculate(unsigned int datas) {
-        
-        string result;
-        
-        thread calculator(datas);
-        calculator.join();
         
     };
     
