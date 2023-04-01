@@ -16,8 +16,7 @@ namespace physics {
         return result;
         
     };
-    
-    unsigned int collision(unsigned int fps, unsigned long long xPositions[], unsigned long long yPositions[], unsigned long long zPositions[], unsigned long long speeds[], unsigned int objectsMass[], unsigned int directionsDegrees[]) {
+    unsigned int calculateCollisions(unsigned int fps, unsigned long long xPositions[], unsigned long long yPositions[], unsigned long long zPositions[], unsigned long long speeds[], unsigned int objectsMass[], unsigned int directionsDegrees[]) {
         
         for () {
             
