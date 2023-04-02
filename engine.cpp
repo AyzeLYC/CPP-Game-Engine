@@ -4,6 +4,7 @@
 #include <std>
 #include <string>
 #include <thread>
+#include <windows.h>
 
 #include "2d/2d.cpp"
 #include "3d/3d.cpp"
@@ -23,39 +24,24 @@
 
 namespace engine {
     
-    unsigned int start(string args[]) {
+    uint1_t stopEngine = 0,
+            playingGameInGameUI = 0;
+    
+    unsigned int start(uint9_t fps) {
         
-        inputs.start();
-        internet.start();
-        twod.start();
-        threed.start();
-        player.start();
-        physics.start();
-        camera.start();
-        raytracing.start();
-        decryption.start();
-        derivation.start();
-        encryption.start();
-        hashing.start();
-        internet.start();
-        project.start();
-        userinterface.start();
-        audio.start();
-        
-    };
-    unsigned int pause(string args[]) {
-        
-        
-        
-    };
-    unsigned int unpause(string args[]) {
-        
-        
-        
-    };
-    unsigned int stop(string args[]) {
-        
-        
+        while(stopEngine == 0) {
+            
+            if (playerGameInGameUI == 0) {
+                
+                sleep(1000 / fps);
+                
+            } else {
+                
+                
+                
+            };
+            
+        };
         
     };
     
