@@ -38,6 +38,7 @@ namespace engine {
         encryption.start();
         hashing.start();
         internet.start();
+        project.start();
         userinterface.start();
         audio.start();
         
