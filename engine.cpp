@@ -5,6 +5,7 @@
 #include <string>
 #include <thread>
 #include <windows.h>
+#include <winuser.h>
 
 #include "audio/audio.cpp"
 #include "camera/camera.cpp"
@@ -32,6 +33,8 @@ namespace engine {
             audioTestResult = 0, // different tests results 1 bit variables that will be updated only at the start of the engine, the app will keep trying to do the tests until all the variables are equal to 1
             cursorVisible = 1,
             fullScreen = 0;
+    unsigned long long windowXSize,
+                       windowYSize;
     
     thread InputsThread(userinterface.start);
     thread InternetThread(internet.start);
@@ -59,7 +62,12 @@ namespace engine {
             userinterfaceTestResult = UserInterfaceThread.join();
             audioTestResult = AudioThread.join();
             
-            while (playingGame == 0) {
+            RECT desktop;
+            const HWND hDesktop = GetDesktopWindow();
+            GetWindowRect(hDesktop, &desktop);
+            GetDesktopResolution(windowXSize, windowYSize);
+            
+            while (playingGame == 1) {
                 
                 sleep(1000 / fps);
                 
