@@ -1,11 +1,14 @@
+#ifdef windows
+#include <windows.h>
+#include <winuser.h>
+#endif
+
 #include <ctime>
 #include <fstream>
 #include <iostream>
 #include <std>
 #include <string>
 #include <thread>
-#include <windows.h>
-#include <winuser.h>
 
 #include "audio/audio.cpp"
 #include "camera/camera.cpp"
