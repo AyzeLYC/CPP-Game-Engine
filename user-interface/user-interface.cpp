@@ -3,7 +3,7 @@
 
 #include "../graphics/graphics.cpp"
 
-namespace ui {
+namespace userinterface {
     
     unsigned int start() {
         
