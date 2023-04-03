@@ -1,6 +1,9 @@
 #ifdef windows
 #include <windows.h>
 #include <winuser.h>
+#elif linux
+#include <sys>
+#include <unistd.h>
 #endif
 
 #include <ctime>
