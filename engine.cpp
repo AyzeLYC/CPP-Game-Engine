@@ -41,40 +41,39 @@ namespace engine {
             userinterfaceTestResult = 0,
             audioTestResult = 0; // different tests results 1 bit variables that will be updated only at the start of the engine, the app will keep trying to do the tests until all the variables are equal to 1
     
-    thread inputsThread(userinterface.start),
-           internetThread(internet.start),
-           twodThread(twod.start),
-           threedThread(threed.start),
-           playerThread(player.start),
-           physicsThread(physics.start),
-           graphicsThread(raytracing.start),
-           cameraThread(camera.start),
-           encryptionThread(encryption.start),
-           decryptionThread(decryption.start),
-           decryptionThread(decryption.start),
-           derivationThread(derivation.start),
-           hashingThread(hashing.start),
-           userinterfaceThread(userinterface.start),
-           audioThread(audio.start);
+    thread InputsThread(userinterface.start);
+    thread InternetThread(internet.start);
+    thread TwodThread(twod.start);
+    thread ThreedThread(threed.start);
+    thread PlayerThread(player.start);
+    thread PhysicsThread(physics.start);
+    thread GraphicsThread(raytracing.start);
+    thread CameraThread(camera.start);
+    thread EncryptionThread(encryption.start);
+    thread DecryptionThread(decryption.start);
+    thread DerivationThread(derivation.start);
+    thread HashingThread(hashing.start);
+    thread UserinterfaceThread(userinterface.start);
+    thread AudioThread(audio.start);
     
     unsigned int start(uint9_t fps) {
         
         if (stopEngine == 0) {
             
-            inputsThread.join();
-            internetThread.join();
-            twodThread.join();
-            threedThread.join();
-            playerThread.join();
-            physicsThread.join();
-            graphicsThread.join();
-            cameraThread.join();
-            encryptionThread.join();
-            decryptionThread.join();
-            derivationThread.join();
-            hashingThread.join();
-            userinterface.join();
-            audioThread.join();
+            InputsThread.join();
+            InternetThread.join();
+            TwodThread.join();
+            ThreedThread.join();
+            LayerThread.join();
+            PhysicsThread.join();
+            GraphicsThread.join();
+            CameraThread.join();
+            EncryptionThread.join();
+            DecryptionThread.join();
+            DerivationThread.join();
+            HashingThread.join();
+            Userinterface.join();
+            AudioThread.join();
             
             while (playingGame == 0) {
                 
