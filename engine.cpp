@@ -50,7 +50,30 @@ namespace engine {
         
         string configFileContent = fstream("C:\Users"  "\AppData\Roaming\Easy-Engine\config.json", ios::in);
         
-        if (stopEngine == 0) {
+        if (stopEngine == 0 && fullScreen == 0) {
+            
+            inputsTestResult = InputsThread.join();
+            internetTestResult = InternetThread.join();
+            encryptionTestResult = EncryptionThread.join();
+            decryptionTestResult = DecryptionThread.join();
+            derivationTestResult = DerivationThread.join();
+            hashingTestResult = HashingThread.join();
+            projectTestResult = ProjectThead.join();
+            userinterfaceTestResult = UserInterfaceThread.join();
+            audioTestResult = AudioThread.join();
+            
+            RECT desktop;
+            const HWND hDesktop = GetDesktopWindow();
+            GetWindowRect(hDesktop, &desktop);
+            GetDesktopResolution(windowXSize, windowYSize);
+            
+            while (playingGame == 1) {
+                
+                sleep(1000 / fps);
+                
+            }
+            
+        } else if (stopEngine == 0 && fullScreen = 1) {
             
             inputsTestResult = InputsThread.join();
             internetTestResult = InternetThread.join();
