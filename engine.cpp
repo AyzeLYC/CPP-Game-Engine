@@ -29,7 +29,9 @@ namespace engine {
             hashingTestResult = 0,
             projectTestResult = 0,
             userinterfaceTestResult = 0,
-            audioTestResult = 0; // different tests results 1 bit variables that will be updated only at the start of the engine, the app will keep trying to do the tests until all the variables are equal to 1
+            audioTestResult = 0, // different tests results 1 bit variables that will be updated only at the start of the engine, the app will keep trying to do the tests until all the variables are equal to 1
+            cursorVisible = 1,
+            fullScreen = 0;
     
     thread InputsThread(userinterface.start);
     thread InternetThread(internet.start);
@@ -43,24 +45,22 @@ namespace engine {
     
     unsigned int start() {
         
-        string configFileContent;
-        configFileContent = 
+        string configFileContent = fstream("C:\Users"  "\AppData\Roaming\Easy-Engine\config.json", ios::in);
         
         if (stopEngine == 0) {
             
-            InputsThread.join();
-            InternetThread.join();
-            EncryptionThread.join();
-            DecryptionThread.join();
-            DerivationThread.join();
-            HashingThread.join();
-            ProjectThead.join();
-            UserInterfaceThread.join();
-            AudioThread.join();
+            inputsTestResult = InputsThread.join();
+            internetTestResult = InternetThread.join();
+            encryptionTestResult = EncryptionThread.join();
+            decryptionTestResult = DecryptionThread.join();
+            derivationTestResult = DerivationThread.join();
+            hashingTestResult = HashingThread.join();
+            projectTestResult = ProjectThead.join();
+            userinterfaceTestResult = UserInterfaceThread.join();
+            audioTestResult = AudioThread.join();
             
             while (playingGame == 0) {
                 
-                engineThread.join();
                 sleep(1000 / fps);
                 
             }
