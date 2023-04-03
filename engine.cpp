@@ -25,21 +25,67 @@
 namespace engine {
     
     uint1_t stopEngine = 0,
-            playingGameInGameUI = 0;
+            playingGame = 0,
+            inputsTestResult = 0,
+            internetTestResult = 0,
+            twoDTestResult = 0,
+            threeDTestResult = 0,
+            playerTestResult = 0,
+            physicsTestResult = 0,
+            graphicsTestResult = 0,
+            cameraTestResult = 0,
+            encryptionTestResult = 0,
+            decryptionTestResult = 0,
+            derivationTestResult = 0,
+            hashingTestResult = 0,
+            userinterfaceTestResult = 0,
+            audioTestResult = 0; // different tests results 1 bit variables that will be updated only at the start of the engine, the app will keep trying to do the tests until all the variables are equal to 1
+    
+    thread inputsThread(userinterface.start),
+           internetThread(internet.start),
+           twodThread(twod.start),
+           threedThread(threed.start),
+           playerThread(player.start),
+           physicsThread(physics.start),
+           graphicsThread(raytracing.start),
+           cameraThread(camera.start),
+           encryptionThread(encryption.start),
+           decryptionThread(decryption.start),
+           decryptionThread(decryption.start),
+           derivationThread(derivation.start),
+           hashingThread(hashing.start),
+           userinterfaceThread(userinterface.start),
+           audioThread(audio.start);
     
     unsigned int start(uint9_t fps) {
         
-        while(stopEngine == 0) {
+        if (stopEngine == 0) {
             
-            if (playerGameInGameUI == 0) {
+            inputsThread.join();
+            internetThread.join();
+            twodThread.join();
+            threedThread.join();
+            playerThread.join();
+            physicsThread.join();
+            graphicsThread.join();
+            cameraThread.join();
+            encryptionThread.join();
+            decryptionThread.join();
+            derivationThread.join();
+            hashingThread.join();
+            userinterface.join();
+            audioThread.join();
+            
+            while (playingGame == 0) {
                 
+                engineThread.join();
                 sleep(1000 / fps);
                 
-            } else {
-                
-                
-                
-            };
+            }
+            
+        } else {
+            
+            
             
         };
         
