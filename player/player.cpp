@@ -22,8 +22,10 @@ namespace player {
         
     }
     
-    string playerDatas{};
-    vector<string> PLAYERS{Player("", "", stoll(0), stoll(0), stoll(0), stoll(0), stoll(0), stoll(0), "OBJ", defaultPlayerModel, playerDatas)};
+    string playerNickname,
+           playerId,
+           playerDatas{};
+    vector<string> PLAYERS{};
     
     unsigned int createPlayer(string nickname, string playerid, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModelFileType, string threeDModel, string additionalDatas{}) {
         
