@@ -6,15 +6,17 @@ namespace player {
     
     struct Player {
         
-        string xCoordinate = 0,
-               yCoordinate = 0,
-               zCoordinate = 0,
-               xRotation = 0,
-               yRotation = 0,
-               zRotation = 0,
-               threeDModelFileType = "",
-               threeDModel = "",
-               playerAdditionalDatas = {};
+        string nickname,
+               playerId,
+               xCoordinate,
+               yCoordinate,
+               zCoordinate,
+               xRotation,
+               yRotation,
+               zRotation,
+               threeDModelFileType,
+               threeDModel,
+               playerAdditionalDatas{};
             
         }
         
@@ -22,10 +24,10 @@ namespace player {
     
     vector<string> PLAYERS{Player};
     
-    unsigned int createPlayer(string nickname, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModel, string aditionalDatas{}) {
+    unsigned int createPlayer(string nickname, string playerid, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModelFileType, string threeDModel, string additionalDatas{}) {
         
-        string PLAYER = new Player(xCoordinate, yCoordinate, zCoordinate, xRotation, yRotation, zRotation, threeDModel, additionalDatas);
-        PLAYER.append("'" +nickname +"': '" + PLAYER + "'");
+        string PLAYER = new Player(nickname, playerid, xCoordinate, yCoordinate, zCoordinate, xRotation, yRotation, zRotation, threeDModelFileType, threeDModel, additionalDatas);
+        PLAYERS.push_back(PLAYER);
         return 1;
         
     };
