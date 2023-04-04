@@ -9,6 +9,7 @@
 #include <unistd.h>
 #endif
 
+#include <array>
 #include <ctime>
 #include <fstream>
 #include <iostream>
