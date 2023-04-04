@@ -2,6 +2,9 @@
 #include <windows.h>
 #include <winuser.h>
 #elif linux
+#include <asm/access.h>
+#include <linux/init.h>
+#include <linux/fs.h>
 #include <sys>
 #include <unistd.h>
 #endif
