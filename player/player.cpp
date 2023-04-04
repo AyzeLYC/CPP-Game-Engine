@@ -1,6 +1,6 @@
-#include <array>
 #include <string>
 #include <thread>
+#include <vector>
 
 namespace player {
     
@@ -20,7 +20,7 @@ namespace player {
         
     }
     
-    array PLAYERS = new array<Player PLAYERDATAS>
+    vector<string> PLAYERS{Player};
     
     unsigned int createPlayer(string nickname, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModel, string aditionalDatas{}) {
         
