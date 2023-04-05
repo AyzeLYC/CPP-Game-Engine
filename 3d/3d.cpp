@@ -9,7 +9,7 @@ namespace threedimension {
         
     };
     
-    unsigned int pyramidAreaEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize, unsigned int dSize) {
+    unsigned int pyramidVolumeEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize, unsigned int dSize) {
         
         
         
