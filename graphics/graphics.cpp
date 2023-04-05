@@ -1,5 +1,6 @@
 #include <fstream>
 #include <string>
+#include <thread>
 
 #include "../2d/2d.cpp"
 #include "../3d/3d.cpp"
@@ -26,7 +27,6 @@
 #include "../physics/physics.cpp"
 #include "../ray-tracing/ray-tracing.cpp"
 #include "../silicon-graphics/opengl/opengl.cpp"
-#include "../threading/threading.cpp"
 
 namespace graphics {
     
