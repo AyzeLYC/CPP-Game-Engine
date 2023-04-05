@@ -15,7 +15,8 @@ namespace project {
                    minute;
             
         }
-        string weapons[],
+        string code[],
+               weapons[],
                objects[],
                npcs[];
         
