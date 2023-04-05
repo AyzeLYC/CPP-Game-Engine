@@ -38,7 +38,7 @@ namespace player {
             if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
                 
                 break;
-                return PLAYERS[i];
+                return PLAYERS[stoull(i)];
                 
             };
             
@@ -51,7 +51,8 @@ namespace player {
             
             if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
                 
-                
+                break;
+                return PLAYERS[stoull(i)];
                 
             };
             
