@@ -26,6 +26,7 @@
 #include "inputs/inputs.cpp"
 #include "internet/internet.cpp"
 #include "project/project.cpp"
+#include "renderer/renderer.cpp"
 #include "user-interface/user-interface.cpp"
 
 namespace engine {
