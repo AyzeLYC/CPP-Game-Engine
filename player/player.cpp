@@ -31,6 +31,33 @@ namespace player {
         return 1;
         
     };
+    unsigned int findPlayer(string playerNameOrId) {
+        
+        for (string i; stoull(i) <= PLAYERS.size(); i = to_string(stoull(i) + 1)) {
+            
+            if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
+                
+                break;
+                return PLAYERS[i];
+                
+            };
+            
+        }
+        
+    };
+    unsigned int deletePlayer(string playerNameOrId) {
+        
+        for (string i; stoull(i) <= PLAYERS.size(); i = to_string(stoull(i) + 1)) {
+            
+            if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
+                
+                
+                
+            };
+            
+        };
+        
+    };
     
     unsigned int movePlayer(uint1_t running, string nickname, string xPosition, string yPosition, string zPosition) {
         
@@ -38,12 +65,6 @@ namespace player {
         
     };
     unsigned int rotatePlayer(string xRotation, string yRotation, string zRotation) {
-        
-        
-        
-    };
-    
-    unsigned int deletePlayer() {
         
         
         
