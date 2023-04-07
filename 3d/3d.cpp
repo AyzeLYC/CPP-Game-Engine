@@ -31,12 +31,12 @@ namespace threedimension {
         
     };
     
-    unsigned int cylinderVolumeEquation(unsigned int) {
+    unsigned int cylinderVolumeEquation(uint1_t inputType, unsigned int InpuT, unsigned int height) {
         
         unsigneed double result;
         
     };
-    unsigned int tubeVolumeEquation(unsigned int radius, unsigned int thickness, unsigned int height) {
+    unsigned int tubeVolumeEquation(uint1_t inputType, unsigned int InpuT, unsigned int thickness, unsigned int height) {
         
         unsigned double result;
         
