@@ -65,6 +65,11 @@ namespace threedimension {
     
     unsigned int object() {
         
+        struct amfFile {
+            
+            
+            
+        }
         struct objFile {
             
             
