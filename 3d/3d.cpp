@@ -65,6 +65,22 @@ namespace threedimension {
     
     unsigned int object() {
         
+        struct objFile {
+            
+            
+            
+        }
+        struct stepFile {
+            
+            
+            
+        }
+        struct stlFile {
+            
+            
+            
+        }
+        
         string objects[];
         
     };
