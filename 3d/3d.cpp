@@ -8,21 +8,26 @@ namespace threedimension {
         return result;
         
     };
-    unsigned int cuboidVolumeEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize) {
+    unsigned int cuboidVolumeEquation(unsigned int length, unsigned int width, unsigned int height) {
         
         unsigned long long result;
         
-        result = aSize * bSize * cSize;
+        result = length * width * height;
         return result;
         
     };
     
-    unsigned int pyramidVolumeEquation(unsigned int length, unsigned int , unsigned int height) {
+    unsigned int pyramidVolumeEquation(unsigned int length, unsigned int width, unsigned int height) {
         
         unsigned double result;
         
-        result = aSize * bSize * cSize / 3;
+        result = length * width * height / 3;
         return result;
+        
+    };
+    unsigned int octahedronVolumeEquation(unsigned int length, unsigned int width, unsigned int height) {
+        
+        
         
     };
     
