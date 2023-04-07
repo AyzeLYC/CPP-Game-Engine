@@ -1,6 +1,6 @@
 namespace threedimension {
     
-    unsigned int cubeAreaEquation(unsigned int size) {
+    unsigned int cubeVolumeEquation(unsigned int size) {
         
         unsigned long long result;
         
@@ -8,25 +8,47 @@ namespace threedimension {
         return result;
         
     };
-    
-    unsigned int pyramidVolumeEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize, unsigned int dSize) {
+    unsigned int cuboidVolumeEquation(unsigned int aSize, unsigned int bSize, unsigned int cSize) {
         
+        unsigned long long result;
         
-        
-    };
-    
-    unsigned int tubeAreaEquation(unsigned int height, unsigned int diameter) {
-        
-        
+        result = aSize * bSize * cSize;
+        return result;
         
     };
     
-    unsigned int sphereCircumferenceEquation(uint1_t inputType, unsigned long long ) {
+    unsigned int pyramidVolumeEquation(unsigned int length, unsigned int , unsigned int height) {
         
+        unsigned double result;
         
+        result = aSize * bSize * cSize / 3;
+        return result;
         
     };
-    unsigned int sphereAreaEquation(uint2_t inputType, unsigned float input) {
+    
+    unsigned int cylinderVolumeEquation(unsigned int) {
+        
+        unsigneed double result;
+        
+    };
+    unsigned int tubeVolumeEquation(unsigned int radius, unsigned int thickness, unsigned int height) {
+        
+        unsigned double result;
+        
+    };
+    
+    unsigned int torusVolumeEquation(unsigned int radiusA, unsigned int radiusB) {
+        
+        unsigned double result;
+        
+    };
+    
+    unsigned int sphereCircumferenceEquation(uint1_t inputType, unsigned int InpuT) {
+        
+        unsigned double result;
+        
+    };
+    unsigned int sphereVolumeEquation(uint2_t inputType, unsigned float InpuT) {
         
         unsigned double result;
         
