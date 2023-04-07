@@ -1,3 +1,6 @@
+#include <fstream>
+#include <string>
+
 namespace threedimension {
     
     unsigned int cubeVolumeEquation(unsigned int size) {
@@ -56,6 +59,13 @@ namespace threedimension {
     unsigned int sphereVolumeEquation(uint2_t inputType, unsigned float InpuT) {
         
         unsigned double result;
+        
+    };
+    
+    
+    unsigned int object() {
+        
+        string objects[];
         
     };
     
