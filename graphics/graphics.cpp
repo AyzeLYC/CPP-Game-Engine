@@ -2,6 +2,11 @@
 #include <string>
 #include <thread>
 
+#ifdef windows
+#include <win32.h>
+#include <winuser.h>
+#endif
+
 #include "../2d/2d.cpp"
 #include "../3d/3d.cpp"
 #include "../amd/fsr/fsr.cpp"
@@ -9,7 +14,7 @@
 #include "../camera/camera.cpp"
 #include "../khronos-group/vulkan/vulkan.cpp"
 #include "../microsoft/directx/directx.cpp"
-#include "../nvidia/cuda/cuda.cpp"
+#include "../nvidia/cuda/cuda_runtime.h"
 #include "../nvidia/dlss/dlss.cpp"
 #include "../nvidia/dsr/dsr.cpp"
 #include "../nvidia/flex/flex.cpp"
@@ -45,17 +50,7 @@ namespace graphics {
     
     string objects[];
     
-    unsigned int start() {
-        
-        
-        
-    };
-    unsigned int pause() {
-        
-        
-        
-    };
-    unsigned int stop() {
+    if () {
         
         
         
