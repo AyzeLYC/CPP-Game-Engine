@@ -50,7 +50,19 @@ namespace graphics {
     
     string objects[];
     
-    if () {
+    if (parameters.CPU == 0 && parameters.CUDA == 0 && parameters.TENSOR == 0) {
+        
+        std::cout << "Impossible to not get any device computing the graphics !" << std::endl;
+        
+    } else if (parameters.CPU == 1 && parameters.CUDA == 0 && parameters.TENSOR == 0) {
+        
+        
+        
+    } else if (parameters.CPU == 1 && parameters.CUDA == 1 && parameters.TENSOR == 0) {
+        
+        
+        
+    } else if (parameters.CPU == 1 && parameters.CUDA == 1 && parameters.TENSOR == 0) {
         
         
         
