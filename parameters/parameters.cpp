@@ -20,5 +20,10 @@ namespace parameters {
         parametersFile.close();
         
     };
+    unsigned int readParametersFile(string filePath) {
+        
+        ifstream parametersFile(filePath);
+        
+    };
     
 }
