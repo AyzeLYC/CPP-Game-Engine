@@ -34,7 +34,9 @@ namespace project {
                zRotation;
         uint1_t canDoDamages,
                 canShoot;
-        string damages;
+        string price,
+               damages,
+               code;
         bullet bullets[];
         
     },
@@ -42,7 +44,11 @@ namespace project {
         
         string name;
         uint1_t canShootBullets;
-        string object;
+        string price,
+               damages,
+               object,
+               sound,
+               code;
         bullet bullets[];
         
     },
@@ -50,8 +56,11 @@ namespace project {
         
         string name,
                caliber,
-               damages,
-               object;
+               price,
+               amount,
+               object,
+               sound,
+               code;
         
     },
           npc {
@@ -64,17 +73,29 @@ namespace project {
             movingPath movingPaths[];
             string code;
             weapons npcWeapons[];
+            bullet bullets[];
             
+    },
+           achievement {
+        
+        string name,
+               text,
+               image,
+               sound;
+        uint1_t unlocked;
+        
     },
            ProjectDatas {
         
         string version,
                name;
         creationDate projectCreationDate;
-        string code[];
         object objects[];
         weapon weapons[];
+        bullet bullets[];
         npc npcs[];
+        achievement achivements[];
+        string code[];
         
     }
     
