@@ -40,7 +40,7 @@ namespace project {
         bullet bullets[];
         
     },
-          weapons {
+          weapon {
         
         string name;
         uint1_t canShootBullets;
@@ -59,8 +59,9 @@ namespace project {
                price,
                amount,
                object,
-               sound,
-               code;
+               sound;
+        uint1_t sumbittedToGravity;
+        string code;
         
     },
           npc {
@@ -69,10 +70,11 @@ namespace project {
             uint1_t canMove,
                     canTalk,
                     canShoot,
-                    canTakeDamages;
+                    canTakeDamages,
+                    canTakeFallingDamages;
             movingPath movingPaths[];
             string code;
-            weapons npcWeapons[];
+            weapon weapons[];
             bullet bullets[];
             
     },
@@ -94,7 +96,7 @@ namespace project {
         weapon weapons[];
         bullet bullets[];
         npc npcs[];
-        achievement achivements[];
+        achievement achievements[];
         string code[];
         
     }
