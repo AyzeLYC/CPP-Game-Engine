@@ -2,6 +2,8 @@
 #include <thread>
 #include <vector>
 
+#include "./project/project.cpp"
+
 namespace player {
     
     struct Player {
@@ -17,28 +19,30 @@ namespace player {
                threeDModelFileType,
                threeDModel,
                playerAdditionalDatas{};
-            
-        }
+        project.object playerObjectsInventory[];
+        project.weapon playerWeaponsInventory[];
+        project.bullet playerBulletsInventory[];
+        project.achievement playerAchievementsInventory[];
         
     }
     
-    vector<string> PLAYERS{Player};
+    vector<string> players{Player};
     
     unsigned int createPlayer(string nickname, string playerid, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModelFileType, string threeDModel, string additionalDatas{}) {
         
         string PLAYER = new Player(nickname, playerid, xCoordinate, yCoordinate, zCoordinate, xRotation, yRotation, zRotation, threeDModelFileType, threeDModel, additionalDatas);
-        PLAYERS.push_back(PLAYER);
+        players.push_back(PLAYER);
         return 1;
         
     };
     unsigned int findPlayer(string playerNameOrId) {
         
-        for (string i; stoull(i) <= PLAYERS.size(); i = to_string(stoull(i) + 1)) {
+        for (string i; stoull(i) <= players.size(); i = to_string(stoull(i) + 1)) {
             
-            if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
+            if (players[(stoull(i))[0]] == playerNameOrId || players[(stoull(i))[1]] == playerNameOrId) {
                 
                 break;
-                return PLAYERS[stoull(i)];
+                return players[stoull(i)];
                 
             };
             
@@ -47,12 +51,12 @@ namespace player {
     };
     unsigned int deletePlayer(string playerNameOrId) {
         
-        for (string i; stoull(i) <= PLAYERS.size(); i = to_string(stoull(i) + 1)) {
+        for (string i; stoull(i) <= players.size(); i = to_string(stoull(i) + 1)) {
             
-            if (PLAYERS[(stoull(i))[0]] == playerNameOrId || PLAYERS[(stoull(i))[1]] == playerNameOrId) {
+            if (players[(stoull(i))[0]] == playerNameOrId || players[(stoull(i))[1]] == playerNameOrId) {
                 
                 break;
-                return PLAYERS[stoull(i)];
+                return players[stoull(i)];
                 
             };
             
