@@ -26,7 +26,7 @@ namespace player {
         
     }
     
-    vector<string> players{Player};
+    Player players[];
     
     unsigned int createPlayer(string nickname, string playerid, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModelFileType, string threeDModel, string additionalDatas{}) {
         
