@@ -22,6 +22,7 @@ namespace player {
         project.object playerObjectsInventory[];
         project.weapon playerWeaponsInventory[];
         project.bullet playerBulletsInventory[];
+        project.npc playerNpcsInventory[];
         project.achievement playerAchievementsInventory[];
         
     }
