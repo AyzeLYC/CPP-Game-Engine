@@ -11,8 +11,8 @@ namespace project {
                hour,
                minute;
         
-    },
-          movingPath {
+    }
+    struct movingPath {
         
         string startingXPosition,
                startingYPosition,
@@ -22,8 +22,8 @@ namespace project {
                endingZPosition,
                movements[];
         
-    },
-          object {
+    }
+    struct object {
         
         string name,
                xPosition,
@@ -39,8 +39,8 @@ namespace project {
                code;
         bullet bullets[];
         
-    },
-          weapon {
+    }
+    struct weapon {
         
         string name;
         uint1_t canShootBullets;
@@ -51,8 +51,8 @@ namespace project {
                code;
         bullet bullets[];
         
-    },
-          bullet {
+    }
+    struct bullet {
         
         string name,
                caliber,
@@ -63,8 +63,8 @@ namespace project {
         uint1_t sumbittedToGravity;
         string code;
         
-    },
-          npc {
+    }
+    struct npc {
             
             string name;
             uint1_t canMove,
@@ -77,8 +77,8 @@ namespace project {
             weapon weapons[];
             bullet bullets[];
             
-    },
-           achievement {
+    }
+    struct achievement {
         
         string name,
                text,
@@ -86,12 +86,13 @@ namespace project {
                sound;
         uint1_t unlocked;
         
-    },
-           ProjectDatas {
+    }
+    struct ProjectDatas {
         
         string version,
                name;
         creationDate projectCreationDate;
+        movingPath movingPaths[];
         object objects[];
         weapon weapons[];
         bullet bullets[];
