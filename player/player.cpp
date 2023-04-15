@@ -69,7 +69,7 @@ namespace player {
         
         
     };
-    unsigned int rotatePlayer(string xRotation, string yRotation, string zRotation) {
+    unsigned int rotatePlayer(string nickname, string xRotation, string yRotation, string zRotation) {
         
         
         
