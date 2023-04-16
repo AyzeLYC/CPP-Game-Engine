@@ -43,36 +43,35 @@ namespace player {
             if (players[(stoull(i))[0]] == playerNameOrId || players[(stoull(i))[1]] == playerNameOrId) {
                 
                 break;
-                return players[stoull(i)];
+                return i;
                 
             };
             
         }
         
     };
-    unsigned int deletePlayer(string playerNameOrId) {
+    unsigned int deletePlayer(string nickname) {
         
-        for (string i; stoull(i) <= players.size(); i = to_string(stoull(i) + 1)) {
-            
-            if (players[(stoull(i))[0]] == playerNameOrId || players[(stoull(i))[1]] == playerNameOrId) {
-                
-                break;
-                return players[stoull(i)];
-                
-            };
-            
-        };
+        string userDbSpace = findPlayer(nickname);
+        players[stoull(userDbSpace)].delete();
+        return true;
         
     };
     
     unsigned int movePlayer(uint1_t running, string nickname, string xPosition, string yPosition, string zPosition) {
         
-        
+        string userDbSpace = findPlayer(nickname);
+        players[stoull(userDbSpace) [2]] = xPosition;
+        players[stoull(userDbSpace) [3]] = yPosition;
+        players[stoull(userDbSpace) [4]] = zPosition;
         
     };
     unsigned int rotatePlayer(string nickname, string xRotation, string yRotation, string zRotation) {
         
-        
+        string userDbSpace = findPlayer(nickname);
+        players[stoull(userDbSpace) [5]] = xRotation;
+        players[stoull(userDbSpace) [6]] = yRotation;
+        players[stoull(userDbSpace) [7]] = zRotation;
         
     };
     
