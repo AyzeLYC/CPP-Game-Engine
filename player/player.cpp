@@ -2,7 +2,8 @@
 #include <thread>
 #include <vector>
 
-#include "./project/project.cpp"
+#include "../object/object.cpp"
+#include "../project/project.cpp"
 
 namespace player {
     
@@ -64,14 +65,16 @@ namespace player {
         players[stoull(userDbSpace) [2]] = xPosition;
         players[stoull(userDbSpace) [3]] = yPosition;
         players[stoull(userDbSpace) [4]] = zPosition;
+        object.players.refresh();
         
     };
     unsigned int rotatePlayer(string nickname, string xRotation, string yRotation, string zRotation) {
         
         string userDbSpace = findPlayer(nickname);
         players[stoull(userDbSpace) [5]] = xRotation;
-        players[stoull(userDbSpace) [6]] = yRotation;
-        players[stoull(userDbSpace) [7]] = zRotation;
+        players[stoull(userDbSpace) [6]] = xRotation;
+        players[stoull(userDbSpace) [7]] = xRotation;
+        object.players.refresh();
         
     };
     
