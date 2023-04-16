@@ -12,6 +12,12 @@ namespace project {
                minute;
         
     }
+    struct movement {
+        
+        string Movement,
+               Timeframe;
+        
+    };
     struct movingPath {
         
         string startingXPosition,
@@ -19,8 +25,8 @@ namespace project {
                startingZPosition,
                endingXPosition,
                endingYPosition,
-               endingZPosition,
-               movements[];
+               endingZPosition;
+        movement movements[];
         
     }
     struct object {
