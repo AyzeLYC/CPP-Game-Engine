@@ -15,7 +15,7 @@ namespace project {
     struct movement {
         
         string Movement,
-               Timeframe;
+               distance;
         
     };
     struct movingPath {
