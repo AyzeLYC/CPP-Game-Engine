@@ -28,7 +28,7 @@ namespace player {
         
     }
     
-    Player players[];
+    vector<Player> players;
     
     unsigned int createPlayer(string nickname, string playerid, string xCoordinate, string yCoordinate, string zCoordinate, string xRotation, string yRotation, string zRotation, string threeDModelFileType, string threeDModel, string additionalDatas{}) {
         
@@ -57,7 +57,7 @@ namespace player {
         string userDbSpace = findPlayer(nickname);
         
         console.datas.assert(0, nickname + " has left the game !");
-        players[stoull(userDbSpace)].delete();
+        players.erase(stoull(userDbSpace));
         object.players.refresh();
         return true;
         
