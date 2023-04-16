@@ -15,6 +15,8 @@ namespace project {
     struct movement {
         
         string Movement,
+               speed,
+               speedType,
                distance,
                distanceType;
         
