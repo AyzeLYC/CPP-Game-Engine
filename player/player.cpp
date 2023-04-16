@@ -34,6 +34,7 @@ namespace player {
         
         string PLAYER = new Player(nickname, playerid, xCoordinate, yCoordinate, zCoordinate, xRotation, yRotation, zRotation, threeDModelFileType, threeDModel, additionalDatas);
         players.push_back(PLAYER);
+        object.players.refresh();
         return 1;
         
     };
