@@ -10,8 +10,9 @@ namespace player {
     struct Player {
         
         string nickname,
-               playerId,
-               xCoordinate,
+               playerId;
+        uint1_t invisible;
+        string xCoordinate,
                yCoordinate,
                zCoordinate,
                xRotation,
