@@ -54,7 +54,10 @@ namespace player {
     unsigned int deletePlayer(string nickname) {
         
         string userDbSpace = findPlayer(nickname);
+        
+        console.datas.assert(0, nickname + " has left the game !");
         players[stoull(userDbSpace)].delete();
+        object.players.refresh();
         return true;
         
     };
