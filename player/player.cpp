@@ -21,11 +21,12 @@ namespace player {
                threeDModelFileType,
                threeDModel,
                playerAdditionalDatas{};
-        project.object playerObjectsInventory[];
-        project.weapon playerWeaponsInventory[];
-        project.bullet playerBulletsInventory[];
-        project.npc playerNpcsInventory[];
-        project.achievement playerAchievementsInventory[];
+        project.object objectsInventory[];
+        project.weapon equippedWeapon;
+        project.weapon weaponsInventory[];
+        project.bullet bulletsInventory[];
+        project.npc npcsInventory[];
+        project.achievement achievementsInventory[];
         
     }
     
@@ -66,20 +67,47 @@ namespace player {
     
     unsigned int movePlayer(uint1_t running, string nickname, string xPosition, string yPosition, string zPosition) {
         
-        string userDbSpace = findPlayer(nickname);
-        players[stoull(userDbSpace) [2]] = xPosition;
-        players[stoull(userDbSpace) [3]] = yPosition;
-        players[stoull(userDbSpace) [4]] = zPosition;
+        string playerPlayersDbSpace = findPlayer(nickname);
+        players[stoull(playerPlayersDbSpace) [2]] = xPosition;
+        players[stoull(playerPlayersDbSpace) [3]] = yPosition;
+        players[stoull(playerPlayersDbSpace) [4]] = zPosition;
         object.players.refresh();
         
     };
     unsigned int rotatePlayer(string nickname, string xRotation, string yRotation, string zRotation) {
         
-        string userDbSpace = findPlayer(nickname);
-        players[stoull(userDbSpace) [5]] = xRotation;
-        players[stoull(userDbSpace) [6]] = xRotation;
-        players[stoull(userDbSpace) [7]] = xRotation;
+        string playerPlayersDbSpace = findPlayer(nickname);
+        players[stoull(playerPlayersDbSpace) [5]] = xRotation;
+        players[stoull(playerPlayersDbSpace) [6]] = xRotation;
+        players[stoull(playerPlayersDbSpace) [7]] = xRotation;
         object.players.refresh();
+        
+    };
+    
+    unsigned int giveWeaponToPlayer(project.weapon Weapon) {
+        
+        if () {
+            
+            
+            
+        };
+        
+    };
+    unsigned int changePlayerWeapon(string nickname, project.weapon Weapon) {
+        
+        string playerPlayersDbSpace = findPlayer(nickname);
+        
+        if (project.weapons.includes(weapon) && players[playerPlayersDbSpace [14]].includes(weapon)) {
+            
+            players[stoull(playerPlayersDbSpace) [14]] = Weapon;
+            return 1;
+            
+        } else {
+            
+            console.datas.assert("The weapon is inexistant !");
+            return 0;
+            
+        };
         
     };
     
