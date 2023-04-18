@@ -1,7 +1,7 @@
 #include <string>
 #include <thread>
 
-#include "../renderer/renderer.cpp"
+#include "../object/object.cpp"
 
 namespace project {
     
