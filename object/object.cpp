@@ -3,6 +3,7 @@
 #include <vector>
 
 #include "../player/player.cpp"
+#include "../project/project.cpp"
 
 struct vector2 {
     
@@ -21,6 +22,8 @@ struct vector3 {
 namespace object {
     
     struct PLAYER = player.Player;
+    
+    object objects[];
     
     unsigned int players() {
         
