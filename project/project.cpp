@@ -1,6 +1,8 @@
 #include <string>
 #include <thread>
 
+#include "../renderer/renderer.cpp"
+
 namespace project {
     
     struct creationDate {
@@ -23,24 +25,16 @@ namespace project {
     };
     struct movingPath {
         
-        string startingXPosition,
-               startingYPosition,
-               startingZPosition,
-               endingXPosition,
-               endingYPosition,
-               endingZPosition;
+        vector3 startingPosition;
+        vector3 endingPosition;
         movement movements[];
         
     }
     struct object {
         
-        string name,
-               xPosition,
-               yPosition,
-               zPosition,
-               xRotation,
-               yRotation,
-               zRotation;
+        string name;
+        vector3 position
+        vector3 rotation;
         uint1_t canDoDamages,
                 canShoot;
         string price,
