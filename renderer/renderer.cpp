@@ -9,6 +9,20 @@
 #include "../physics/physics.cpp"
 #include "../player/player.cpp"
 
+struct vector2 {
+    
+    unsigned long long x,
+                       y;
+    
+}
+struct vector3 {
+    
+    unsigned long long x,
+                       y,
+                       z;
+    
+}
+
 namespace renderer {
     
     for (bool i = true; i = true; i = true) {
