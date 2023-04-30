@@ -4,7 +4,9 @@
 
 namespace files {
     
-    string defaultFilesPath = "C:\Users\" + +"\AppData\Roaming";
+    string userName;
+    
+    string defaultFilesPath = str("C:\Users\" +userName +"\Appdata\Roaming");
     
     unsigned int createFile(string filePath, string fileName, string fileContent) {
         
