@@ -7,6 +7,8 @@
 #include <linux/fs.h>
 #include <sys>
 #include <unistd.h>
+#elif openos
+#include <openos/os.cpp>
 #endif
 
 #include <array>
