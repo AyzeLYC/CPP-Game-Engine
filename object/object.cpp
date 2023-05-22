@@ -18,12 +18,25 @@ struct vector3 {
            z;
     
 }
+struct vector2object {
+    
+    vector2 position,
+            rotation;
+    
+}
+struct vector3object {
+    
+    vector3 position,
+            rotation;
+    
+}
 
 namespace object {
     
     struct PLAYER = player.Player;
     
-    object objects[];
+    string object;
+    OBJECT OBJECTS[];
     
     unsigned int players() {
         
