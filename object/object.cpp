@@ -10,26 +10,26 @@ struct vector2 {
     string x,
            y;
     
-}
+};
 struct vector3 {
     
     string x,
            y,
            z;
     
-}
+};
 struct vector2object {
     
     vector2 position,
             rotation;
     
-}
+};
 struct vector3object {
     
     vector3 position,
             rotation;
     
-}
+};
 
 namespace object {
     
